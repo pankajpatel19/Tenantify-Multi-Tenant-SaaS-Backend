@@ -127,6 +127,75 @@ Client Request
 
 ---
 
+📦 Project Root
+│
+├── 📂 src
+│ ├── 📂 config
+│ │ ├── db.js # Database connection
+│ │ ├── redis.js # Redis config
+│ │
+│ ├── 📂 controller
+│ │ ├── auth.controller.js
+│ │ ├── project.controller.js
+│ │ └── activity.controller.js
+│ │
+│ ├── 📂 logs
+│ │ ├── logger.js
+│ │ ├── streams.js
+│ │
+│ ├── 📂 middleware
+│ │ ├── auth.middleware.js
+│ │ ├── tenant.middleware.js
+│ │ ├── rbac.middleware.js
+│ │ ├── error.middleware.js
+│ │ └── activityLog.middleware.js
+│ │
+│ ├── 📂 models
+│ │ ├── user.model.js
+│ │ ├── tenant.model.js
+│ │ ├── project.model.js
+│ │ ├── task.model.js
+│ │ ├── Activity.model.js
+│ │ └── Invite.model.js
+│ │
+│ ├── 📂 queue
+│ │ ├── email.queue.js
+│ │ └── worker.queue.js
+│ │
+│ ├── 📂 rate-limits
+│ │ ├── loginRateLimiter.js
+│ │ └── tenantRateLimiter.js
+│ │
+│ ├── 📂 routes
+│ │ ├── auth.routes.js
+│ │ ├── project.routes.js
+│ │ └── activity.routes.js
+│ │
+│ ├── 📂 services
+│ │ ├── auth.service.js
+│ │ ├── project.service.js
+│ │ └── activity.service.js
+│ │
+│ ├── 📂 utils
+│ │ ├── AppError.js
+│ │ ├── catchAsync.js
+│ │ ├── jwt.js
+│ │ ├── logActivity.js
+│ │ └── mailer.js
+│ │
+│ ├── app.js # Express app config
+│ └── index.js # Server entry point
+│
+├── 📄 .env
+├── 📄 .gitignore
+├── 📄 package.json
+├── 📄 package-lock.json
+├── 📄 README.md
+│
+├── combined.log
+├── exception.log
+└── rejection.log
+
 ## 🔐 Environment Variables
 
 Create a `.env` file in the root directory:
