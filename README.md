@@ -63,71 +63,6 @@ This project focuses on **scalability, security, auditability, and clean code de
 ## 📁 Folder Structure
 
 ```
-src/
-├── controllers/
-├── services/
-├── models/
-├── routes/
-├── middlewares/
-├── utils/
-├── config/
-│   └── redis.js
-├── app.js
-└── server.js
-```
-
----
-
-## 🔄 Request Flow
-
-```
-Client Request
- → Auth Middleware
- → Tenant Middleware
- → Role Middleware
- → Controller
- → Service
- → Activity Log
- → Response
-```
-
----
-
-## 🗑️ Soft Delete Strategy
-
-- Records are **never hard-deleted**
-- Data is marked using:
-
-  - `isDeleted`
-  - `deletedAt`
-  - `deletedBy`
-
-- Soft-deleted records are **automatically hidden**
-- Admins can restore deleted records
-- Prevents accidental data loss
-
----
-
-## 📜 Activity Logs
-
-- Logs all critical actions:
-
-  - CREATE
-  - UPDATE
-  - DELETE
-  - RESTORE
-
-- Logs are:
-
-  - Tenant-aware
-  - User-specific
-  - Stored asynchronously
-
-- Logging does **not affect API performance**
-
----
-
-```
 📦 Project Root
 │
 ├── src
@@ -195,7 +130,57 @@ Client Request
 ├── combined.log
 ├── exception.log
 └── rejection.log
+
 ```
+
+---
+
+## 🔄 Request Flow
+
+```
+Client Request
+ → Auth Middleware
+ → Tenant Middleware
+ → Role Middleware
+ → Controller
+ → Service
+ → Activity Log
+ → Response
+```
+
+---
+
+## 🗑️ Soft Delete Strategy
+
+- Records are **never hard-deleted**
+- Data is marked using:
+
+  - `isDeleted`
+  - `deletedAt`
+  - `deletedBy`
+
+- Soft-deleted records are **automatically hidden**
+- Admins can restore deleted records
+- Prevents accidental data loss
+
+---
+
+## 📜 Activity Logs
+
+- Logs all critical actions:
+
+  - CREATE
+  - UPDATE
+  - DELETE
+  - RESTORE
+
+- Logs are:
+
+  - Tenant-aware
+  - User-specific
+  - Stored asynchronously
+
+- Logging does **not affect API performance**
 
 ---
 
