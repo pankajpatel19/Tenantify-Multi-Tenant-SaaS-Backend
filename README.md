@@ -129,54 +129,54 @@ Client Request
 
 📦 Project Root
 │
-├── 📂 src
-│ ├── 📂 config
+├── src
+│ ├── config
 │ │ ├── db.js # Database connection
-│ │ ├── redis.js # Redis config
+│ │ └── redis.js # Redis config
 │ │
-│ ├── 📂 controller
+│ ├── controller
 │ │ ├── auth.controller.js
 │ │ ├── project.controller.js
 │ │ └── activity.controller.js
 │ │
-│ ├── 📂 logs
+│ ├── logs
 │ │ ├── logger.js
-│ │ ├── streams.js
+│ │ └── streams.js
 │ │
-│ ├── 📂 middleware
+│ ├── middleware
 │ │ ├── auth.middleware.js
 │ │ ├── tenant.middleware.js
 │ │ ├── rbac.middleware.js
 │ │ ├── error.middleware.js
 │ │ └── activityLog.middleware.js
 │ │
-│ ├── 📂 models
+│ ├── models
 │ │ ├── user.model.js
 │ │ ├── tenant.model.js
 │ │ ├── project.model.js
 │ │ ├── task.model.js
-│ │ ├── Activity.model.js
-│ │ └── Invite.model.js
+│ │ ├── activity.model.js
+│ │ └── invite.model.js
 │ │
-│ ├── 📂 queue
+│ ├── queue
 │ │ ├── email.queue.js
 │ │ └── worker.queue.js
 │ │
-│ ├── 📂 rate-limits
+│ ├── rate-limits
 │ │ ├── loginRateLimiter.js
 │ │ └── tenantRateLimiter.js
 │ │
-│ ├── 📂 routes
+│ ├── routes
 │ │ ├── auth.routes.js
 │ │ ├── project.routes.js
 │ │ └── activity.routes.js
 │ │
-│ ├── 📂 services
+│ ├── services
 │ │ ├── auth.service.js
 │ │ ├── project.service.js
 │ │ └── activity.service.js
 │ │
-│ ├── 📂 utils
+│ ├── utils
 │ │ ├── AppError.js
 │ │ ├── catchAsync.js
 │ │ ├── jwt.js
@@ -186,12 +186,11 @@ Client Request
 │ ├── app.js # Express app config
 │ └── index.js # Server entry point
 │
-├── 📄 .env
-├── 📄 .gitignore
-├── 📄 package.json
-├── 📄 package-lock.json
-├── 📄 README.md
-│
+├── .env
+├── .gitignore
+├── package.json
+├── package-lock.json
+├── README.md
 ├── combined.log
 ├── exception.log
 └── rejection.log
