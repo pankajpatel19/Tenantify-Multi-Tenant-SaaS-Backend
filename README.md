@@ -195,6 +195,8 @@ Client Request
 ├── exception.log
 └── rejection.log
 
+---
+
 ## 🔐 Environment Variables
 
 Create a `.env` file in the root directory:
